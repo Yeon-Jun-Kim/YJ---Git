@@ -1,0 +1,136 @@
+
+
+.card-background {
+	height: 3000px;
+	margin-top: 800px;
+	margin-bottom: 1600px;
+}
+
+
+
+.card{ position:sticky;
+	top: 400px;
+	margin-top: 200px;
+	
+	
+}
+
+
+.navbar { width: 100%;
+	height: 80px;
+	background-color: black;
+	justify-content: flex-start
+	
+	
+}
+.navbar p{
+	margin: 0;
+	float: left;
+	color: white;
+	margin-left: 20px
+
+
+	
+}
+
+.navbar li{
+	color: white;
+	
+}
+
+body {
+	background-color: lightgrey
+}
+
+.search { width: 100%;
+	margin-top: 20px
+	
+	
+}
+
+.searchview { margin-left: 20px;
+	
+}
+
+.cart { width: 100%;
+	margin-top: 30px;
+	height: 600px;
+	
+}
+
+.product { float: left;
+	width: 20%;
+	height: 80%;
+	background-color: white;
+	margin-left: 4%;
+	
+	
+}
+
+.image {
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+
+
+
+
+
+.title {
+	
+font-size: 15pt;
+color: black;
+}
+
+
+.drag {
+	width: 100%;
+	height: 600px;
+	background-color: darkgray;
+	padding-top: 1px;
+}
+
+.drag-drop { 
+	
+	width: 90%;
+	height: 400px;
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	color: white;
+	text-align: center;
+	padding-top: 1px;
+}
+
+.newpro{float: left;
+	width: 20%;
+	height: 80%;
+	background-color: white;
+	margin-left: 4%;
+	margin-top: 30px;
+	
+	
+	
+}
+
+.brand{ color: black}
+
+.price{  color: black}
+
+.get{
+	
+}
+
+.sum { width; 100%;
+	height: 200px;
+	
+	
+}
+
+.final_price {
+	font-size: 20pt;
+	margin-left: 20px;
+	
+}

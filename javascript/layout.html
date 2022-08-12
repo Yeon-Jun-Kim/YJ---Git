@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="css/layout.css" rel="stylesheet">
+
+    <title></title>
+  </head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+	
+	
+  <body style="margin: 0">
+<div class="navbar"> 
+	  <p style="font-size: 20pt">집꾸미기</p>
+		<p>Home</p>
+	<p>Store</p>
+	<p>시공견적</p>
+	  
+	  
+	  </div>
+	  
+	  <div class="search">
+		  
+		  <input placeholder = '검색하세요'type="search" class="searchview">
+	  </div>
+	  
+	  
+	  <div class="cart">
+		  
+	<div id="0" draggable="true" class="product"> <img class="image" src="pr1.JPG"></div>
+	<div id="1" draggable="true" class="product"><img class="image" src="pr2.jpg"></div>
+	<div id="2" draggable="true" class="product"><img class="image" src="pr3.JPG"></div>
+	<div id="3" draggable="true" class="product"><img class="image" src="pr4.JPG"></div>
+	  
+	  
+	  <div style="clear: both;"></div>
+	  
+	  </div>
+	  
+	  
+	  <div class="drag">
+		  <p style="margin-top: 10px;"> 장바구니 </p>
+		  
+		 <div class="drag-drop"> <p class="notice" style="margin-top: 200px;">드래그하세요</p> </div>
+		  
+		  
+	  
+
+	  </div>
+	  
+	  
+	  <div class = 'sum'> <p class="final_price"> 최종가격</p> <p class = "sumprice"> </p>  </div>
+	  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+	  
+	  
+	  </script>
+	  <script>
+var product = [
+    {
+      "id": 0,
+      "title": "식기세척기",
+      "brand": "세척나라",
+      "photo": "pr1.jpg",
+      "price": 10000
+    },
+    {
+      "id": 1,
+      "title": "원목 침대 프레임",
+      "brand": "침대나라",
+      "photo": "pr2.jpg",
+      "price": 20000
+    },
+    {
+      "id": 2,
+      "title": "천연 디퓨저 세트",
+      "brand": "향기나라",
+      "photo": "pr3.jpg",
+      "price": 30000
+    },
+    {
+      "id": 3,
+      "title": "시원한 서큘레이터",
+      "brand": "바람나라",
+      "photo": "pr4.jpg",
+      "price": 40000
+    }
+  ];
+		  
+
+	for(let i =0; i<4; i++){
+			$('.product').eq(i).append(`<p class = "title">`+ product[i]['title']+ `</p>`);
+		$('.product').eq(i).append(`<p class = "price">`+ product[i]['price']+ `</p>`);
+		$('.product').eq(i).append(`<p class = "brand">`+ product[i]['brand']+ `</p>`);
+		$('.product').eq(i).append(`<button class = 'get'>담기</button>`);
+			
+			
+		}
+		  
+		  
+
+		  $('.searchview').on('input',function(){
+			  var temp = $('.searchview').val();
+			  var newproduct = product.filter(function(a){
+				  return a.title.includes(temp) || a.brand.includes(temp)
+				  
+				  
+			  })
+			  
+			  console.log()
+			  if(newproduct.length>0 && temp.length>0){
+			
+				  
+				  $('.product').html('');
+				  for(var i in newproduct){$('.product').eq(i).append(`<img class = 'image' src = "`+ newproduct[i].photo + `">`)
+			  $('.product').eq(i).append(`<p class = "title">`+ newproduct[i]['title']+ `</p>`);
+		$('.product').eq(i).append(`<p class = "price">`+ newproduct[i]['price']+ `</p>`);
+		$('.product').eq(i).append(`<p class = "brand">`+ newproduct[i]['brand']+ `</p>`);
+		$('.product').eq(i).append(`<button class = "get">담기</button>`);}
+				  }
+			  
+			  if(newproduct.length == 0){
+				  
+				  $('.product').html('');
+				  
+				  for(let i =0; i<4; i++){
+			$('.product').eq(i).append(`<img class = 'image' src = "`+ product[i].photo + `">`);
+				
+				  
+			$('.product').eq(i).append(`<p class = "title">`+ product[i]['title']+ `</p>`);
+		$('.product').eq(i).append(`<p class = "price">`+ product[i]['price']+ `</p>`);
+		$('.product').eq(i).append(`<p class = "brand">`+ product[i]['brand']+ `</p>`);
+		$('.product').eq(i).append(`<button class = "get">담기</button>`);
+		
+			
+			
+		}
+				  
+				  
+			  }
+			
+			
+			
+		})
+		var arr = {0:0, 1:0, 2:0, 3:0}
+		 
+		$('.drag-drop').on('dragover',function(e){
+			
+			e.preventDefault();
+		})
+		  
+		  
+		$('.product').on('dragstart', function(e){
+			e.originalEvent.dataTransfer.setData('temp', e.target.id);
+			
+		})
+		  
+		 $('.drag-drop').on('drop',function(e){
+			temp = e.originalEvent.dataTransfer.getData('temp')
+			arr[temp] += 1
+			console.log(arr)
+			 
+			if(arr[temp] < 2){$('.notice').css('display','none')
+			$('.drag-drop').append(`<div class = "newpro" > <img class= 'image' src = "`+product[temp]['photo']+`">
+		  <p class= "title">`+ product[temp].title +`</p> <p class = 'brand'>`+ product[temp].brand +`</p>
+			<p  class = "price"> `+ product[temp].price + `</p>
+		<p class= "count" style = "color : black;"> 1 </p>
+		  </div>`);
+			$('.sumprice').html('합계 : ' + parseInt(10000 * parseInt(arr['0'])) + parseInt(20000 * parseInt(arr['1'])) + parseInt(30000 * parseInt(arr['2'])) + parseInt(40000 * parseInt(arr['3'])))}
+			 
+			 else{ $('.count').html(arr[temp]);
+				 
+			$('.sumprice').html('합계 : ' + parseInt(10000 * parseInt(arr['0'])) + parseInt(20000 * parseInt(arr['1'])) + parseInt(30000 * parseInt(arr['2'])) + parseInt(40000 * parseInt(arr['3'])))
+			 }
+			
+		 })
+		  
+		  
+		  
+		 $('.get').on('click',function(e){
+			 temp = e.target.parentNode.id;
+			 arr[temp] += 1
+			 if(arr[temp] < 2){$('.notice').css('display','none')
+			$('.drag-drop').append(`<div class = "newpro" > <img class= 'image' src = "`+product[temp]['photo']+`">
+		  <p class= "title">`+ product[temp].title +`</p> <p class = 'brand'>`+ product[temp].brand +`</p>
+			<p  class = "price"> `+ product[temp].price + `</p>
+		<p class= "count" style = "color : black;"> 1 </p>
+		  </div>`);
+		$('.sumprice').html('합계 : ' + parseInt(10000 * parseInt(arr['0'])) + parseInt(20000 * parseInt(arr['1'])) + parseInt(30000 * parseInt(arr['2'])) + parseInt(40000 * parseInt(arr['3'])))					  
+							  }
+			 
+			 else{ $('.count').html(arr[temp]);
+				  
+				 $('.sumprice').html('합계 : ' + parseInt(10000 * parseInt(arr['0'])) + parseInt(20000 * parseInt(arr['1'])) + parseInt(30000 * parseInt(arr['2'])) + parseInt(40000 * parseInt(arr['3'])))
+				 
+			 }
+			
+			
+			 
+			 
+		 })
+		  
+		  $('.sumprice').html('합계 : ' + parseInt(10000 * parseInt(arr['0'])) + parseInt(20000 * parseInt(arr['1'])) + parseInt(30000 * parseInt(arr['2'])) + parseInt(40000 * parseInt(arr['3'])))
+		
+		
+		  
+		
+		  
+		
+				  
+				  
+			  
+			  
+				 
+				 
+		  	
+		 
+		  
+		  
+		  
+				 
+				
+				 
+			
+			  
+			  
+			  
+			  
+			  
+		  
+	
+		  
+		  
+	  
+	  
+	  </script>
+
+   
+  </body>
+</html>

@@ -1,4 +1,4 @@
-let mondata = [
+let dict = [
     {
        "id":1,
        "num":"001",
@@ -3655,5 +3655,4 @@ let mondata = [
        ]
     }
  ]
-
- export default mondata
+ export {dict}

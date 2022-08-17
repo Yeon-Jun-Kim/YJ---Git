@@ -163,13 +163,60 @@
 .adventure {
   width: 100%;
   height: 200px;
+ 
   text-align: center;
   
 
 }
 
-.advenbutton {
-margin-top: 100px;
+
+
+.box {
+  display: inline-block;
+  width: 20%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: azure;
+  opacity: 90%;
+}
+
+.naming {
+  text-align: center;
+  
+}
+
+.background {
+  background-image: url('https://w.namu.la/s/8d0ac4491b28831a1b633640522b415e6532a2d1dc7db71e0fb429b8ae97d2b228141530c157de42bf30ce8756637951690b6d0ea9838542b3535768ae638ad221d6916d194e2d39ec4615034aeee38a7bfda6afd88175502d42fa2d92a4455f');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 
 }
 
+.detailpage {
+  display: block;
+  margin: auto;
+  width: 30%;
+  background-color: beige;
+  text-align: center;
+}
+
+.center{margin: auto;
+  display: block;
+}
+
+
+
+.outside {
+  text-align: center;
+
+}
+
+.hunt {
+width: 40%;
+height: 400px;
+margin: auto;
+background-color: azure;
+
+}

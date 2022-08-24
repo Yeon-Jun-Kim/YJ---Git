@@ -10,12 +10,17 @@ import { useParams } from 'react-router-dom'
 import {Page,Page2,Page3,Page4,Page5,Page6} from './page'
 import NavScrollExample from './Navbar';
 import {dict} from './dict';
+import useInterval from './useinterval';
 
 
 function App() {
+  if(sessionStorage.getItem('box') == undefined){sessionStorage.setItem('box',JSON.stringify([]))}
+  
+
   let [name,setname] = useState('')
   let [people,setpeople] = useState([['김문영','/치람.png'],['이윤수','/이윤수.png'],['김민재','/이어롭.png']])
   let [id,setid] = useState('')
+  
   
   
   
@@ -32,6 +37,7 @@ function App() {
       <Route path='second/third/:id/forth/main/information' element={ <Page7 people = {people} id = {id} name ={name} ></Page7>}>
       <Route path='player' element={<div><Player name={name} id = {id} people = {people} > </Player> </div>}> </Route>
       <Route path='poketmon' element={<div><Poketmon name = {name} id = {id} people = {people}> </Poketmon> </div>}> </Route>
+      <Route path='box' element={<Box></Box>}> </Route>
       </Route>
       <Route path='second/third/:id/forth/main/dict' element={<div><Dict dict={dict}></Dict></div>}></Route>
       <Route path='second/third/:id/forth/main/dict/:id' element={<div><Detailpage> dict={dict}</Detailpage></div>}></Route>
@@ -51,7 +57,7 @@ function Page7(props){
 
 
   return <div className='second'>
-    <Outlet></Outlet>
+    <div className='detailbox'><Outlet></Outlet> </div>
      </div>
 
 }
@@ -138,7 +144,7 @@ function Hunt(){
   let getRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);
   let random = getRandom(0,dict.length)
   let term = Math.random()
-  console.log(term)
+
   
 
 
@@ -153,6 +159,13 @@ function Hunt(){
       }
         
         else{alert('포획되었다.')
+        let box = sessionStorage.getItem('box')
+        box = JSON.parse(box)
+        
+        box.push(random)
+        console.log(box)
+        sessionStorage.setItem('box',JSON.stringify(box))
+        
         navigate(-1)
       }
         
@@ -165,6 +178,29 @@ function Hunt(){
      </div>
   
 
+
+}
+
+function Box(){
+  let [fad, setfad] = useState('')
+  let box = sessionStorage.getItem('box')
+  box = JSON.parse(box)
+
+  console.log(fad)
+  useInterval(function(){
+    if(fad == ''){ setfad('fading')}
+    else{ setfad('')}
+  },1100)
+
+  
+  return <div>
+    {box.map(function(x){
+      return <div className='box'><p className='naming'>{dict[x]['name']}</p>
+        <img className={'mypocketmon ' + fad} src={dict[x]['img']}></img>
+         </div>
+    })}
+  </div>
+   
 }
 
 

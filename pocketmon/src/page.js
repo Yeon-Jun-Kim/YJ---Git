@@ -6,6 +6,8 @@ import useInterval from './useinterval';
 import { Button,Container,Form,Nav,Navbar,NavDropdown } from 'react-bootstrap';
 import './App.css'
 function Page(props){
+
+  
     return <div className='first'>
       
          
@@ -16,6 +18,8 @@ function Page(props){
      let copy = [...props.name]
      copy = e.target.value;
      props.setname(copy);
+     sessionStorage.setItem('name',copy)
+    
      e.stopPropagation();
   
   
@@ -26,6 +30,7 @@ function Page(props){
      </div>
   }
   function Page2(props){
+    console.log(sessionStorage.getItem('name'))
     return <div className='first'>
       
          
@@ -128,38 +133,40 @@ function Page6(props){
   
   let [fade,setfade] = useState('')
   let id= sessionStorage.getItem('id')
-  useInterval(function(){
-    if(fade == ''){setfade('monster2')}
-    else{ setfade('')}
-    
+  let name = sessionStorage.getItem('name')
 
-  },1000)
 
   
  
 
   
 return <div className='second'>
-<div className='div1'>
-  <p className='name_2'> {props.name}</p>
+  <div className='detailbox'>
+<div className='div1 relative'>
+  <p className='name_2'> {name}</p>
   <div></div><img src = '/금선.png' className='girl'></img></div>
-  <div className='div2'>
+  <div className='div2 relative'>
    <p className='name_2'> {props.people[id][0]}</p> 
+   
     <img src= {props.people[id][1]} className = {'monster '+fade}   draggable='true'></img></div>
   <div style={{clear:'both'}}></div>
-  <Button variant="outline-dark" className='info'><Link to={'information/player'}> 플레이어 정보</Link></Button>
-  <Button variant="outline-dark" className='info'><Link to={'information/poketmon'}> 포켓몬 정보 </Link></Button>
+  <Button variant="outline-dark" className='info relative'><Link to={'information/player'}> 플레이어 정보</Link></Button>
+  <Button variant="outline-dark" className='info relative'><Link to={'information/poketmon'}> 포켓몬 정보 </Link></Button>
 
-  <div className='outside'>
+  <div className='outside relative'>
  <Button variant="outline-dark" className='boxing' >
     <Link to={'dict'}>포켓몬 도감</Link>
     </Button>
     </div>
-    <div className='outside' >
+    <div className='outside relative' >
     <Button variant="outline-dark" className='boxing'><Link to={'hunt'} >포켓몬 잡으러 가기</Link></Button>
     </div>
+    <div className='outside relative' >
+    <Button variant="outline-dark" className='boxing'><Link to={'information/box'} >포켓몬 보관함</Link></Button>
+    </div>
+   
 
-
+    </div>
 
 
 </div>

@@ -5,6 +5,7 @@ import TypeAnimation from 'react-type-animation';
 import useInterval from './useinterval';
 import { Button,Container,Form,Nav,Navbar,NavDropdown } from 'react-bootstrap';
 import './App.css'
+import { useNavigate } from 'react-router-dom';
 function Page(props){
 
   
@@ -24,7 +25,7 @@ function Page(props){
   
   
     }}></input>
-    <button style={{display:'block', margin:'auto'}}> <Link to={"second"}> 결정</Link>  </button>
+    <Link to={"second"}> <img src='nextbutton.png' className='arrow' style={{marginTop:'10px'}}></img></Link> 
   
   
      </div>
@@ -41,7 +42,7 @@ function Page(props){
         sequence={[props.name + '이구나']}
         wrapper="h2"
       />
-    <button style={{display:'block', margin:'auto'}}><Link to={"third"}>다음</Link></button>
+    <Link to={"third"}><img src='/nextbutton.png' className='arrow'></img></Link>
   
   
      </div>
@@ -54,7 +55,7 @@ function Page(props){
     {props.people.map(function(a,i){
   
       return <motion.div animate = {{opacity:[0,1]}} transition={{duration:2.0}} className='poketmon'> <Link to = {"" + i}><img className = 'poketmon2'src={a[1]}>
-      </img></Link> <p>{a[0]}</p> </motion.div>
+      </img></Link> <p className='outside'>{a[0]}</p> </motion.div>
         
   
     })
@@ -105,7 +106,7 @@ function Page5(props){
     
     setTimeout( ()=>{setball(['/몬스터볼.webp', '/열린몬스터볼.png'])}, 500);
     setTimeout( ()=>{settalk(['도감에 등록됩니다.'])}, 1000);
-    setTimeout( ()=>{settemp(<Link to={'main'}>다음</Link>)}, 1000);
+    setTimeout( ()=>{settemp(<Link to={'main'}><img src='/nextbutton.png' className='arrow'></img></Link>)}, 1000);
     
   },[])
   
@@ -134,6 +135,7 @@ function Page6(props){
   let [fade,setfade] = useState('')
   let id= sessionStorage.getItem('id')
   let name = sessionStorage.getItem('name')
+  let Navigate = useNavigate()
 
 
   
@@ -141,30 +143,15 @@ function Page6(props){
 
   
 return <div className='second'>
-  <div className='detailbox'>
-<div className='div1 relative'>
-  <p className='name_2'> {name}</p>
-  <div></div><img src = '/금선.png' className='girl'></img></div>
-  <div className='div2 relative'>
-   <p className='name_2'> {props.people[id][0]}</p> 
-   
-    <img src= {props.people[id][1]} className = {'monster '+fade}   draggable='true'></img></div>
-  <div style={{clear:'both'}}></div>
-  <Button variant="outline-dark" className='info relative'><Link to={'information/player'}> 플레이어 정보</Link></Button>
-  <Button variant="outline-dark" className='info relative'><Link to={'information/poketmon'}> 포켓몬 정보 </Link></Button>
 
-  <div className='outside relative'>
- <Button variant="outline-dark" className='boxing' >
-    <Link to={'dict'}>포켓몬 도감</Link>
-    </Button>
-    </div>
-    <div className='outside relative' >
-    <Button variant="outline-dark" className='boxing'><Link to={'hunt'} >포켓몬 잡으러 가기</Link></Button>
-    </div>
-    <div className='outside relative' >
-    <Button variant="outline-dark" className='boxing'><Link to={'information/box'} >포켓몬 보관함</Link></Button>
-    </div>
-   
+  <img className='mylogo' src='/YJ.png'></img>
+  <div className='detailbox'>
+  <div className='mainbox relative'> <p className='heightcenter'><button onClick={()=>{Navigate("information/poketmon")}} className='none'>포켓몬 정보</button></p></div>
+  <div className='mainbox relative'> <p className='heightcenter'><button onClick={()=>{Navigate("information/player")}} className='none'>플레이어 정보</button></p></div>
+  <div className='mainbox relative'> <p className='heightcenter'><button onClick={()=>{Navigate('dict')}} className = 'none'>포켓몬 도감</button></p></div>
+  <div className='mainbox relative'> <p className='heightcenter'><button onClick={()=>{Navigate('hunt')}} className = 'none'>포켓몬 잡으러가기</button></p></div>
+  <div className='mainbox relative'> <p className='heightcenter'><button onClick={()=>{Navigate('information/box')}} className = 'none'>포켓몬 보관함</button></p></div>
+  <div className='mainbox relative'> <p className='heightcenter'><button onClick={()=>{Navigate('information/help')}} className=' none'>도움말</button></p></div>
 
     </div>
 

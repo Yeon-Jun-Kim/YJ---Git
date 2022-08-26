@@ -38,6 +38,7 @@ function App() {
       <Route path='player' element={<div><Player name={name} id = {id} people = {people} > </Player> </div>}> </Route>
       <Route path='poketmon' element={<div><Poketmon name = {name} id = {id} people = {people}> </Poketmon> </div>}> </Route>
       <Route path='box' element={<Box></Box>}> </Route>
+      <Route path='help' element={<Help></Help>}>  </Route>
       </Route>
       <Route path='second/third/:id/forth/main/dict' element={<div><Dict dict={dict}></Dict></div>}></Route>
       <Route path='second/third/:id/forth/main/dict/:id' element={<div><Detailpage> dict={dict}</Detailpage></div>}></Route>
@@ -54,31 +55,43 @@ function App() {
 
 
 function Page7(props){
+  let Navigate = useNavigate()
 
 
   return <div className='second'>
-    <div className='detailbox'><Outlet></Outlet> </div>
+    
+    <img src='/뒤로가기.png' className='backbutton' onClick={()=>{
+      Navigate(-1)
+
+    }} ></img>
+   
+    <div className='detailbox'  >
+      <Outlet></Outlet> </div>
      </div>
 
 }
 
 function Player(props){
+  let name = sessionStorage.getItem('name')
+  let id = sessionStorage.getItem('id')
 
 
-  return <div><p> 이름 : {props.name}</p>
-  <p>나이 : 17</p>
-  <p> 스타팅 포켓몬 : {props.people[props.id][0]}</p>
+  return <div style={{paddingTop:'100px'}} ><p className='outside relative'>이름 : {name}</p>
+  <img src='/금선.png' className='girl relative'></img>
+  <p className='outside relative'>나이 : 17</p>
+  <p className='outside relative'> 스타팅 포켓몬 : {props.people[id][0]}</p>
   </div>
 
 
 }
 function Poketmon(props){
+  let name = sessionStorage.getItem('name')
+  let id = sessionStorage.getItem('id')
 
-
-  return <div>
-    <p> 이름 : {props.people[props.id][0]}</p>
-    <p> 주인 : {props.name}</p>
-    <p>만난 날 : </p>
+  return <div style={{paddingTop:'100px'}}>
+    <img src={props.people[id][1]} className='monster relative'></img>
+    <p className='outside relative'> 이름 : {props.people[id][0]}</p>
+    <p className='outside relative'> 주인 : {name}</p>
   
   </div>
 
@@ -133,7 +146,7 @@ function Detailpage(){
     <button
     onClick={function(){
     navigate(-1)
-    }}> 도감으로 돌아가기</button>
+    }}> 돌아가기</button>
     
 
   </div>
@@ -149,10 +162,10 @@ function Hunt(){
 
 
   return <div className='hunt'>
-    <p> 야생의 포켓몬 {dict[random]['name']}이(가) 나타났다.</p>
-    <img src={dict[random]['img']} style={{display:'block'}}></img>
+    <p className='outside' style={{marginTop:'5%'}}> 야생의 포켓몬 {dict[random]['name']}이(가) 나타났다.</p>
+    <img src={dict[random]['img']} style={{display:'block' ,margin:'auto'}}></img>
 
-    <button onClick={
+    <img onClick={
       function(){
         if(term>0.5){alert('포켓몬이 도망가버렸다.')
         window.location.reload()
@@ -172,7 +185,7 @@ function Hunt(){
         
       }
 
-    } >포획하기</button>
+    } src={'/포켓볼.png'} className='ball'></img>
     
     
      </div>
@@ -185,8 +198,9 @@ function Box(){
   let [fad, setfad] = useState('')
   let box = sessionStorage.getItem('box')
   box = JSON.parse(box)
+  let Navigate = useNavigate()
 
-  console.log(fad)
+
   useInterval(function(){
     if(fad == ''){ setfad('fading')}
     else{ setfad('')}
@@ -196,13 +210,29 @@ function Box(){
   return <div>
     {box.map(function(x){
       return <div className='box'><p className='naming'>{dict[x]['name']}</p>
-        <img className={'mypocketmon ' + fad} src={dict[x]['img']}></img>
+        <Link to={'/second/third/:id/forth/main/dict/' + (x + 1)}><img  className={'mypocketmon ' + fad} src={dict[x]['img'] 
+      }></img></Link>
+        
          </div>
     })}
   </div>
    
 }
 
+
+function Help(){
+
+  return <div style={{paddingTop:"20px"}}>
+    <p className='outside relative'  > 포켓몬 키우기 웹페이지 제작자 김연준입니다.</p>
+    <p className='outside relative'> 포켓몬 정보는 스타팅 포켓몬의 정보를 나타냅니다. </p>
+    <p className='outside relative'> 트레이너 정보는 트레이너의 정보를 나타냅니다.</p>
+    <p className='outside relative'> 포켓몬 도감은 포켓몬 도감을 볼수 있고 검색 기능, 클릭하면 세부 정보를 볼 수 있습니다.</p>
+    <p className='outside relative'> 포켓몬 잡으러가기를 통해서는 무작위로 포켓몬을 잡을 수 있고 확률은 50% 입니다. 클릭하면 해당 도감으로 이동합니다.</p>
+    <p className='outside relative'> 이용해주셔서 감사합니다.</p>
+
+
+  </div>
+}
 
 
 

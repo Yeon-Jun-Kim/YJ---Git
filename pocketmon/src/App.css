@@ -69,7 +69,7 @@
 }
 .poketmon{ 
   width: 25%;
-  height: 300px;
+  height: 30%;
   background-color: white;
   margin-left: 6%;
   float:left;
@@ -83,21 +83,33 @@
   
 
  }
- .poketmon2 { height: 60%;
+ .poketmon2 { width: 80%;
   display: block;
   margin: auto;
 
 
  }
- .poketmon3 { height: 100%;
+ .poketmon3 { width: 100%;
+
   display: block;
   margin: auto;
+
+
+
+
+ }
+ .poketmon4 { width: 100%;
+
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+
 
 
  }
  .minza {
   width: 25%;
-  height: 200px;
+  height: 20%;
   display: block;
   margin: auto;
  }
@@ -204,6 +216,7 @@
   display: block;
   margin: auto;
   width: 30%;
+  border-radius: 5%;
 
   background-color: beige;
   text-align: center;
@@ -321,6 +334,11 @@ border-radius: 10%;
   float: right;
 
 }
+.backbutton_2{
+  width: 6%;
+  float: right;
+
+}
 
 .backbuttonimg {
   width: 80%;
@@ -339,4 +357,8 @@ border-radius: 10%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.searchbar {
+  width: 100%;
+  
 }

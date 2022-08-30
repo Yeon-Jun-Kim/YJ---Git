@@ -12,7 +12,7 @@ function Page(props){
     return <div className='first'>
       
          
-    <img src='/oh.png' className='oh'></img>
+    <img src='/Oh.png' className='oh'></img>
     <Type1></Type1>
     
     <input type={'text'}  className = 'text' onChange = {function(e){
@@ -35,7 +35,7 @@ function Page(props){
     return <div className='first'>
       
          
-    <img src='/oh.png' className='oh'></img>
+    <img src='/Oh.png' className='oh'></img>
     <TypeAnimation
         className='name'
         cursor={true}
@@ -50,7 +50,7 @@ function Page(props){
 
   function Page3(props){
     return <div className='first'>
-    <img src='/oh.png' className='oh'></img>
+    <img src='/Oh.png' className='oh'></img>
     <h4 className='name'> 지금부터 너의 포켓몬을 선택해보자!</h4>
     {props.people.map(function(a,i){
   
@@ -68,12 +68,12 @@ function Page(props){
 
 function Page4(props){
   let {id} = useParams();
-  let [ball, setball] = useState(['/몬스터볼.webp', '/열린몬스터볼.png'])
+  let [ball, setball] = useState(['/monster.webp', '/Openmonster.png'])
  
   
   useEffect(function(){
     
-    setTimeout( ()=>{setball(['/열린몬스터볼.png', '/몬스터볼.webp'])}, 500);
+    setTimeout( ()=>{setball(['/Openmonster.png', '/monster.webp'])}, 500);
 
     props.setid(id)
     sessionStorage.setItem('id',id)
@@ -85,26 +85,26 @@ function Page4(props){
   return <div className='first'>
     
   
-  <img src='/oh.png' className='oh'></img>
+  <img src='/Oh.png' className='oh'></img>
 
   <h4 className='name'> 이게 너의 포켓몬이구나 </h4>
   <motion.div animate = {{opacity:[0,1]}} transition={{duration:2.0}} className='minza' > <img className = 'poketmon3'src = {props.people[id][1]}>
     </img> </motion.div>
 
-    <div className='minza'><Link to={"forth"}><img className='poketmon3' src = {ball[0]} ></img></Link> </div>
-    <p className='name'> 몬스터볼을 클릭해보자</p>
+    <div className='minza'><Link to={"forth"}><img className='poketmon4' src = {ball[0]} ></img></Link> </div>
+    <p className='name' style={{marginTop:'70px'}}> 몬스터볼을 클릭해보자</p>
    </div>
    
 
 
 }
 function Page5(props){
-  let [ball, setball] = useState(['/열린몬스터볼.png', '/몬스터볼.webp'])
+  let [ball, setball] = useState(['/Openmonster.png', '/monster.webp'])
   let [talk,settalk] = useState("포켓몬이 포획되었다.")
   let [temp, settemp] = useState('너로 정했다.')
   useEffect(function(){
     
-    setTimeout( ()=>{setball(['/몬스터볼.webp', '/열린몬스터볼.png'])}, 500);
+    setTimeout( ()=>{setball(['/monster.webp', '/Openmonster.png'])}, 500);
     setTimeout( ()=>{settalk(['도감에 등록됩니다.'])}, 1000);
     setTimeout( ()=>{settemp(<Link to={'main'}><img src='/nextbutton.png' className='arrow'></img></Link>)}, 1000);
     
@@ -114,14 +114,14 @@ function Page5(props){
   return <div className='first'>
     
   
-  <img src='/oh.png' className='oh'></img>
+  <img src='/Oh.png' className='oh'></img>
 
   <h4 className='name'> {temp}</h4>
   <motion.div animate = {{opacity:[1,0]}} transition={{duration:2.0}} className='minza' > <img className = 'poketmon3'src = {props.people[props.id][1]}>
   </img></motion.div>
 
     <div className='minza'> <img className='poketmon3' src = {ball[0]} ></img> </div>
-    <p className='name'> {talk} </p>
+    <p className='name' style={{marginTop:'60px'}}> {talk} </p>
    </div>
    
 

@@ -11,6 +11,7 @@ import {Page,Page2,Page3,Page4,Page5,Page6} from './page'
 import NavScrollExample from './Navbar';
 import {dict} from './dict';
 import useInterval from './useinterval';
+import { useInView } from 'react-intersection-observer'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   
 
   let [name,setname] = useState('')
-  let [people,setpeople] = useState([['김문영','/치람.png'],['이윤수','/이윤수.png'],['김민재','/이어롭.png']])
+  let [people,setpeople] = useState([['김문영','/Chi.png'],['이윤수','/Lee.png'],['김민재','/Ear.png']])
   let [id,setid] = useState('')
   
   
@@ -60,7 +61,7 @@ function Page7(props){
 
   return <div className='second'>
     
-    <img src='/뒤로가기.png' className='backbutton' onClick={()=>{
+    <img src='/back.png' className='backbutton' onClick={()=>{
       Navigate(-1)
 
     }} ></img>
@@ -77,7 +78,7 @@ function Player(props){
 
 
   return <div style={{paddingTop:'100px'}} ><p className='outside relative'>이름 : {name}</p>
-  <img src='/금선.png' className='girl relative'></img>
+  <img src='/Girl.png' className='girl relative'></img>
   <p className='outside relative'>나이 : 17</p>
   <p className='outside relative'> 스타팅 포켓몬 : {props.people[id][0]}</p>
   </div>
@@ -99,6 +100,7 @@ function Poketmon(props){
 }
 
 function Dict(){
+let [ref,inview] = useInView()
 let [target,settarget] = useState("")
 let [look,setlook] = useState([{'name':''}])
 let copy =  dict.filter(function(a){
@@ -114,27 +116,30 @@ useEffect(function()
 else{setlook([{'name':'','id':''}])}
 
 },[target])
-console.log(look[0]['id'])
 
 
 
 
-return <div className='background'>
+
+
+
+return <div className='background' >
 <NavScrollExample target = {target} settarget = {settarget}> </NavScrollExample>
 
 {target == "" ? dict.map(function(a){
-  return <div className='box'><p className='naming'>{a['name']}</p>
-    <Link to={String(a['id'])}><img src={a['img']} style={{margin:'auto', display:'block'}}></img></Link></div>
-}) : <div className='box'> <p className='naming'>{look[0]['name']}</p> <Link to={String(look[0]['id'])}><img src={look[0]['img'] }style={{margin:'auto', display:'block'}}></img></Link></div>
+  return  <div className='box' ><p className='naming'>{a['name']}</p>
+    <Link to={String(a['id'])}><img src={a['img']} style={{margin:'auto', display:'block', height:'50%'}}></img></Link> </div>})
+
+: <div className='box'> <p className='naming'>{look[0]['name']}</p> <Link to={String(look[0]['id'])}><img src={look[0]['img'] }style={{margin:'auto', display:'block', height:'50%'}}></img></Link></div>
 
 }
-
 </div>}
 
 
 function Detailpage(){
  let {id} = useParams()
  let navigate = useNavigate()
+ 
 
 
   return  <div className='detailpage'>
@@ -143,11 +148,10 @@ function Detailpage(){
     <p >타입 :{dict[id-1]['type']}</p>
     <p >신장 :{dict[id-1]['height']}</p>
     <p >몸무게 : {dict[id-1]['weight']}</p>
-    <button
-    onClick={function(){
+   <img src='/back.png' style={{width:'10%'}} onClick={()=>{
     navigate(-1)
-    }}> 돌아가기</button>
-    
+
+   }}></img>
 
   </div>
 }
@@ -185,7 +189,7 @@ function Hunt(){
         
       }
 
-    } src={'/포켓볼.png'} className='ball'></img>
+    } src={'/pocketball.png'} className='ball'></img>
     
     
      </div>
@@ -210,7 +214,7 @@ function Box(){
   return <div>
     {box.map(function(x){
       return <div className='box'><p className='naming'>{dict[x]['name']}</p>
-        <Link to={'/second/third/:id/forth/main/dict/' + (x + 1)}><img  className={'mypocketmon ' + fad} src={dict[x]['img'] 
+        <Link to={'/second/third/:id/forth/main/dict/' + (x + 1)}><img   className={'mypocketmon ' + fad} src={dict[x]['img'] 
       }></img></Link>
         
          </div>

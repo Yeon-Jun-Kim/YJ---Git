@@ -9,14 +9,14 @@ import {useNavigate} from 'react-router-dom';
 function NavScrollExample(props) {
   let navigate = useNavigate()
   return (
-    <Navbar bg="light" expand="lg" >
+    <Navbar bg="light" expand="lg"  className='searchbar'>
       <Container fluid>
         <Navbar.Brand href="#">포켓몬 도감</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Collapse id="navbarScroll" style={{paddingTop:'20px'}}>
          
        
-          <Form className="d-flex">
+          <Form className="d-flex" style={{width:'30%'}}>
             <Form.Control
               type="search"
               placeholder="Search"
@@ -26,10 +26,10 @@ function NavScrollExample(props) {
               props.settarget(e.target.value)
               }}
             />
-            <Button variant="outline-success">Search</Button>
+            
           </Form>
 
-          <img src='/뒤로가기.png' className='backbutton' onClick={()=>{
+          <img src='/back.png' className='backbutton_2' onClick={()=>{
       navigate(-1)
 
     }}></img>

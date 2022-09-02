@@ -172,7 +172,7 @@ function Hunt(){
     <img onClick={
       function(){
         if(term>0.5){alert('포켓몬이 도망가버렸다.')
-        window.location.reload()
+        navigate(-1)
       }
         
         else{alert('포획되었다.')

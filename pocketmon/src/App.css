@@ -42,14 +42,14 @@
   display: block;
   margin: auto;
   width: 70%;
-  height: 800px;
+  height: 100vh;
   background-color: black;
   border-radius: 10%;
 
 }
 
 .oh {
-  height: 30%;
+  height: 30vh;
   margin-top: 20%;
   display: block;
   margin: auto;
@@ -69,7 +69,7 @@
 }
 .poketmon{ 
   width: 25%;
-  height: 30%;
+  height: width;
   background-color: white;
   margin-left: 6%;
   float:left;
@@ -102,22 +102,30 @@
 
   display: block;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 20px;
+
 
 
 
  }
  .minza {
-  width: 25%;
-  height: 20%;
+  width: 20vmin;
+  height: width;
   display: block;
   margin: auto;
+ 
  }
+ 
+@media (max-height: 700px) {
+  .minza { width: 15vmin; }
+}
+
+
  .second {
   display: block;
   margin: auto;
-  width: 80%;
-  height: 800px;
+  width: 80vw;
+  height: 100vh;
   background-color: springgreen;
   padding-top: 1px;
   border-radius: 5%;
@@ -129,7 +137,7 @@
   
 
 .girl {
-  width: 10%;
+  width: 20vmin;
   display: block;
   margin: auto;
  
@@ -151,7 +159,7 @@
 }
 
 .monster {
-  width: 20%;
+  width: 30vmin;
   display: block;
   margin: auto;
 
@@ -301,7 +309,7 @@ width: 50%;
 float: left;
 text-align: center;
 position: relative;
-height: 200px;
+height: 30vh;
 border: 5px solid greenyellow;
 border-radius: 10%;
 
@@ -314,7 +322,7 @@ border-radius: 10%;
   width: 100%;
   position: absolute;
   top: 40%;
-  font-size: 20pt;
+  font-size: pt;
 }
 
 .none {
@@ -346,7 +354,7 @@ border-radius: 10%;
 
 .arrow {
 
-  width: 5%;
+  width: 50px;
   display: block;
   margin: auto;
 }

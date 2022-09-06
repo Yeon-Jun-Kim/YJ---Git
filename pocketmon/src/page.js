@@ -7,6 +7,7 @@ import { Button,Container,Form,Nav,Navbar,NavDropdown } from 'react-bootstrap';
 import './App.css'
 import { useNavigate } from 'react-router-dom';
 function Page(props){
+  
 
   
     return <div className='first'>

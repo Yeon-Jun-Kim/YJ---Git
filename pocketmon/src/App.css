@@ -199,7 +199,7 @@
 .box {
   display: inline-block;
   width: 20%;
-  height: 200px;
+  height: width;
   border: 1px solid black;
   border-radius: 30px;
   background-color: azure;
@@ -368,5 +368,18 @@ border-radius: 10%;
 }
 .searchbar {
   width: 100%;
+  
+}
+
+.box2 {
+  display: block;
+  margin: auto;
+
+
+
+}
+
+@media  (max-width : 700px ) {
+  .box2 {width: 80px;}
   
 }

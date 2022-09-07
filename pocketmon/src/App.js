@@ -128,7 +128,7 @@ return <div className='background' >
 
 {target == "" ? dict.map(function(a){
   return  <div className='box' ><p className='naming'>{a['name']}</p>
-    <Link to={String(a['id'])}><img src={a['img']} style={{margin:'auto', display:'block', height:'50%'}}></img></Link> </div>})
+    <Link to={String(a['id'])}><img src={a['img']} className='box2'></img></Link> </div>})
 
 : <div className='box'> <p className='naming'>{look[0]['name']}</p> <Link to={String(look[0]['id'])}><img src={look[0]['img'] }style={{margin:'auto', display:'block', height:'50%'}}></img></Link></div>
 

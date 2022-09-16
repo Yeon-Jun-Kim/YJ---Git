@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.first {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 1000px;
+}
+
+.nav { width: 100vw;
+height: 100px;
+background-color: #ffffff;
+border-top: thistle solid 1px;
+position: fixed;
+
+}
+
+.nav2{
+
+  border-bottom: black solid 1px;
+}

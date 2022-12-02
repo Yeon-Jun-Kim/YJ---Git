@@ -6,7 +6,12 @@ import "./styles.css";
 
 
 let idx = 10
+
 function App() {
+  
+
+
+  
   let [ref,inview] =  useInView()
   function range(start, end) {
     let array = [];
@@ -35,7 +40,12 @@ function App() {
 
  
 
-  return <div>{count.map(function(a){
+  return <div>
+    <div>
+
+    </div>
+    {
+    count.map(function(a){
     return <div ref={ref} className="ListItem">{a}</div>
 
   })}

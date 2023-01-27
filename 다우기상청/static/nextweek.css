@@ -1,0 +1,44 @@
+.main {
+    margin: auto;
+    display: block;
+    padding-top: 1px;
+
+    width: 50%;
+    height: 1000px;
+    background-color:white;
+    border-radius: 100px;
+}
+
+.info { font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-top:  100px;
+
+
+}
+
+.phone {
+    padding-top: 1px;
+    height: 800px;
+    background-image: url("https://cdn.pixabay.com/photo/2020/08/08/20/27/cellphone-5473878_960_720.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+    background-color: white;
+   
+
+
+}
+
+
+.nextbutton {
+   
+    width: 100pt;
+    height: 100pt;
+    display: block;
+    margin: auto;
+
+
+}
+
+

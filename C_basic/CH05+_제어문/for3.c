@@ -17,8 +17,17 @@ int main() {
 	for (i = start; i <= end; i++) {
 
 		sum += i;
+		if (sum > 3000) {
+			break;
+
+		}
+	}
+	if(i == end +1){
+	printf("%d부터 %d까지의 합은 : %d", start, end, sum);
 	}
 
-	printf("합은 : %d", sum);
+	else {
+		printf("%d부터 %d까지의 합은 : %d", start, i, sum);
+	}
 
 }

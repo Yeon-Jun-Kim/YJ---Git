@@ -54,7 +54,22 @@
     <ClCompile Include="5-3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5-5.c">
+    <ClCompile Include="5-7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Ns-l00f.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ns.loof2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="break.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="while_ex.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="forecx.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

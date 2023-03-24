@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//32bit
 int main()
 {
 	signed char c1 = 'A';

@@ -1,0 +1,11 @@
+﻿  switch3.c
+C:\C_basic\CH05+_제어문\switch3.c(17,9): warning C4477: 'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char *'입니다.
+C:\C_basic\CH05+_제어문\switch3.c(17,9): message : 서식 문자열에서 '%hhd'을(를) 사용하는 것이 좋습니다.
+C:\C_basic\CH05+_제어문\switch3.c(21,20): warning C4013: 'emp_input'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\C_basic\CH05+_제어문\switch3.c(23,21): warning C4013: 'emp_output'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\C_basic\CH05+_제어문\switch3.c(25,19): warning C4013: 'emp_find'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\C_basic\CH05+_제어문\switch3.c(17,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\C_basic\CH05+_제어문\switch3.c(50): warning C4716: 'emp_find': 값을 반환해야 합니다.
+C:\C_basic\CH05+_제어문\switch3.c(40): warning C4716: 'emp_input': 값을 반환해야 합니다.
+C:\C_basic\CH05+_제어문\switch3.c(45): warning C4716: 'emp_output': 값을 반환해야 합니다.
+  CH05+_제어문.vcxproj -> C:\C_basic\CH05+_제어문\x64\Debug\CH05+_제어문.exe

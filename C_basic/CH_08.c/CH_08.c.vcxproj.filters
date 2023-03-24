@@ -51,7 +51,7 @@
     <ClCompile Include="string_fuction.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="array5.c">
+    <ClCompile Include="employee.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="arrayex2.c">
@@ -76,6 +76,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="practice.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="9장_Level3_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="array8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="array0.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

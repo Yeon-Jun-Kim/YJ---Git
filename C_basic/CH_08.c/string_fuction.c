@@ -2,9 +2,10 @@
 
 int main() {
 	int i,len;
-	char s1[20] = "king", s2[20] = "";
+	char s1[20] = "king", s2[20] = "a";
 	printf("s1: %s, s2: %s \n", s1, s2);
 	printf("size : %d, len %d\n", sizeof(s1), strlen(s1));
+	printf("%c", s2[3]);
 
 	//s2 = s1;
 	//printf("size : %d, len %d\n", sizeof(s1), strlen(s1)); 직접 대입 불가능.

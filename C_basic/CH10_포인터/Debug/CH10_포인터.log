@@ -1,0 +1,5 @@
+﻿  10-9.c
+C:\C_basic\CH10_포인터\10-9.c(7,11): warning C4013: 'my_Strcat'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\C_basic\CH10_포인터\10-9.c(15,17): warning C4013: 'strlen'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\C_basic\CH10_포인터\10-9.c(23): warning C4716: 'my_Strcat': 값을 반환해야 합니다.
+  CH10_포인터.vcxproj -> C:\C_basic\CH10_포인터\Debug\CH10_포인터.exe

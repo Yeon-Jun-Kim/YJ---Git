@@ -9,7 +9,7 @@ int main() {
 
 	printf("%d, %d, %d \n", sizeof(c1), sizeof(str[0]), sizeof(str));
 	printf("%c, %c, %p, %p \n\n", c1, str[0], &str[0], str);
-	printf("%p, %s \n\n", str,str+4);
+	printf("%p, %s \n\n", str,str+4); // 4 부터  null 나올때까지 읽음
 
 
 	printf("input string ?");

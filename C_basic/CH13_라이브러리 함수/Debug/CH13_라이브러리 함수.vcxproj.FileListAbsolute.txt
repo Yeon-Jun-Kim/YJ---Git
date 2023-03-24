@@ -1,0 +1,2 @@
+C:\Users\i\source\repos\CH13_라이브러리 함수\Debug\CH13_라이브러리 함수.exe
+C:\C_basic\CH13_라이브러리 함수\Debug\CH13_라이브러리 함수.exe

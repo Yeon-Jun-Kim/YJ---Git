@@ -8,13 +8,14 @@ int main()
 
 	while (stop)
 	{
+
 		printf("1. 사원정보 입력\n");
 		printf("2. 사원정보 출력\n");
 		printf("3. 사원정보 검색\n");
 		printf("4. 사원정보 종료\n");
 		printf("select (1~4) \n");
-		scanf("%*c%c", &ans);
-
+		scanf("%*c%s", &ans);
+		
 		switch (ans)
 		{
 		case 1: emp_input();
@@ -27,6 +28,11 @@ int main()
 		default:
 			break;
 		}
+
+		while (getchar() != '\n')
+		{
+			getchar();
+		};
 	}
 } // main end
 

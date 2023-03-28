@@ -1,6 +1,2 @@
-﻿  datatype3.c
-C:\C_basic\CH_01_데이터타입\datatype3.c(18,1): warning C4305: '초기화 중': '__int64'에서 'float'(으)로 잘립니다.
-C:\C_basic\CH_01_데이터타입\datatype3.c(19,1): warning C4305: '초기화 중': '__int64'에서 'double'(으)로 잘립니다.
-C:\C_basic\CH_01_데이터타입\datatype3.c(12,12): warning C4101: 'x1' :참조되지 않은 지역 변수입니다.
-C:\C_basic\CH_01_데이터타입\datatype3.c(15,16): warning C4101: 'x4' :참조되지 않은 지역 변수입니다.
+﻿  datatype5.c
   CH_01_데이터타입.vcxproj -> C:\C_basic\CH_01_데이터타입\Debug\CH_01_데이터타입.exe

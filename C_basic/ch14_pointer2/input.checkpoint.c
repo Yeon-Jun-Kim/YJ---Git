@@ -17,8 +17,9 @@ int main()
 		gets(tmp);  //4500000, sample
 		if (!strcmp(tmp, "0"))
 		{
-			printf("salary : 0");
-			exit(1);
+			salary = atoi(tmp);
+		
+			break;
 		}
 		
 		salary = atoi(tmp);

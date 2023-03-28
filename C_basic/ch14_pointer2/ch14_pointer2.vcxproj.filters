@@ -45,5 +45,23 @@
     <ClCompile Include="str_check.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="pointer7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cast1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="void_pointer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dataswap.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="function pointer_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="function_pointer2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

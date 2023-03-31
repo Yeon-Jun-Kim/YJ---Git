@@ -34,7 +34,7 @@ int main()
 	//	fwrite(&stu[i], sizeof(struct STUDENT), 1, fp); // 불러올 주소, 넣을 사이즈, 갯수, 넣을 곳 
 	//} // 1번째 방법
 	//fwrite(stu, sizeof(stu), 1, fp);//2번째 방법
-	//fwrite(stu, sizeof(struct STUDENT), 3, fp); // 3번째 방법
+	fwrite(stu, sizeof(struct STUDENT), 3, fp); // 3번째 방법
 	fclose(fp);
 	
 
@@ -44,9 +44,10 @@ int main()
 
 
 	}
-	while(1){
+	while(1)
+	{
 	
-		if (fread(&tmp, sizeof(struct STUDENT), 1, fp) != 1)
+		if (!fread(&tmp, sizeof(struct STUDENT), 1, fp)) // tmp에 저장 
 		{
 			break;
 		}
@@ -56,6 +57,8 @@ int main()
 	printf("tmp : %s, %d, %d, %d, %.2f \n", tmp.name,
 		tmp.kor, tmp.eng, tmp.mat, tmp.avg);
 	}
+
+
 	for (i = 0; i < STU_SZ; i++)
 	{
 		fread(&stu[i], sizeof(struct STUDENT), 1, fp);

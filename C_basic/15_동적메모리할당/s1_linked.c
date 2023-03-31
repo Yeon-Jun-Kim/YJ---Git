@@ -57,10 +57,10 @@ int main()
 
 		}
 
-		//데이터 출력
 
 
-	//메모리 해제
+
+
 
 		empPtr = head;
 		
@@ -71,14 +71,14 @@ int main()
 	{
 		printf("%s, %d, %.2f, %s \n", empPtr->name, empPtr->salary, empPtr->height, empPtr->comAddr);
 		empPtr = empPtr->next;
-
+		//데이터 출력
 	}
 	while (empPtr)
 	{
 		x = empPtr;
 		empPtr = empPtr->next;
 		free(x);
-
+		//메모리 해제
 	}
 	
 }

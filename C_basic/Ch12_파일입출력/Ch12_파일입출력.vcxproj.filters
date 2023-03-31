@@ -57,5 +57,14 @@
     <ClCompile Include="연습문제2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="prac.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="portfolio.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="qwer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

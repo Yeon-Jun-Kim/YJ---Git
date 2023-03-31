@@ -1,5 +1,6 @@
-﻿  연습문제2.c
-C:\C_basic\Ch12_파일입출력\연습문제2.c(9,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\C_basic\Ch12_파일입출력\연습문제2.c(27,11): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\C_basic\Ch12_파일입출력\연습문제2.c(31,12): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  qwer.c
+C:\C_basic\Ch12_파일입출력\qwer.c(24,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'char *'입니다.
+C:\C_basic\Ch12_파일입출력\qwer.c(79,25): warning C4133: '함수': 'char [1024]'과(와) 'FILE *const ' 사이의 형식이 호환되지 않습니다.
+C:\C_basic\Ch12_파일입출력\qwer.c(70,10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\C_basic\Ch12_파일입출력\qwer.c(79,13): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   Ch12_파일입출력.vcxproj -> C:\C_basic\Ch12_파일입출력\Debug\Ch12_파일입출력.exe

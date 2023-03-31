@@ -23,7 +23,7 @@ int main()
 		exit(1);
 	}
 	fprintf(fp, "%s %d %d %d %f ", stu2.name,
-		stu2.kor, stu2.eng, stu2.mat, stu2.avg);
+		stu2.kor, stu2.eng, stu2.mat, stu2.avg); // fp 에 입력한다.
 	fprintf(fp, "%s %d %d %d %f ", stu3.name,
 		stu3.kor, stu3.eng, stu3.mat, stu3.avg);
 	fclose(fp);
@@ -39,7 +39,7 @@ int main()
 	{
 		int cn;
 		cn = fscanf(fp, "%s %d %d %d %f ", tmp.name,
-			&tmp.kor, &tmp.eng, &tmp.mat, &tmp.avg);
+			&tmp.kor, &tmp.eng, &tmp.mat, &tmp.avg); // fp -> tmp
 		if (cn != 5)
 			break;
 		printf("tmp : %s, %d, %d, %d, %.2f \n", tmp.name,

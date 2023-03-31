@@ -42,5 +42,14 @@
     <ClCompile Include="s2_linked.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="employee_global.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="employee_local.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="employee_DArray.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

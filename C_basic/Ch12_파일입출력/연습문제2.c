@@ -2,7 +2,7 @@
 #include <string.h>
 int main()
 {
-	char* token;
+	char* token;	
 	int i, cn =0;
 	char tmp[4][80] = { 0 };
 	FILE* fp;

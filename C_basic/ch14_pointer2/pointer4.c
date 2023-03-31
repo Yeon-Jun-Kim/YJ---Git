@@ -23,6 +23,7 @@ int main()
 wordOutput(char (*word)[30],int row)
 {
 	int i;
+
 	for (i = 0; *word[i]; i++)
 	
 	{

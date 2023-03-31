@@ -5,7 +5,7 @@ int main()
 char ch;
 	FILE* fp;// 파일 포인터 fp 는 포인터 변수
 	//1 스트림연결 // 파일명이 유일해야함, 용량이 충분해야함
-	fp = fopen("file1.txt", "wt");  // 모드를 정함 쓰기 모드.
+	fp = fopen("file1", "wt");  // 모드를 정함 쓰기 모드.
 	if (fp == NULL)
 	{
 		printf("파일 열기 오류\n");
@@ -14,7 +14,7 @@ char ch;
 	printf("stdin -> disk\n");
 	//2 파일저장
 	while ((ch = fgetc(stdin)) != EOF)
-		fputc(ch, fp);
+		fputc(ch, fp); // ch -> fp
 
 	//3 스트림닫기
 	fclose(fp);

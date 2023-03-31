@@ -1,1 +1,9 @@
-﻿  15_동적메모리할당.vcxproj -> C:\C_basic\15_동적메모리할당\Debug\15_동적메모리할당.exe
+﻿  employee_local.c
+C:\C_basic\15_동적메모리할당\employee_local.c(39,7): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\C_basic\15_동적메모리할당\employee_local.c(40,23): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+C:\C_basic\15_동적메모리할당\employee_local.c(42,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\C_basic\15_동적메모리할당\employee_local.c(54,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\C_basic\15_동적메모리할당\employee_local.c(74,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\C_basic\15_동적메모리할당\employee_local.c(132,12): error C2065: 'head': 선언되지 않은 식별자입니다.
+C:\C_basic\15_동적메모리할당\employee_local.c(132,12): warning C4047: '=': 'EMPLOYEE *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\C_basic\15_동적메모리할당\employee_local.c(349,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

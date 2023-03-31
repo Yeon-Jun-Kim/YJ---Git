@@ -21,7 +21,7 @@ int main()
 		exit(1);
 	}
 
-	fgets(tmp, 20, fp);
+	fgets(tmp, 20, fp); // fp - > tmp
 	fclose(fp);
 
 	printf("%s", tmp);

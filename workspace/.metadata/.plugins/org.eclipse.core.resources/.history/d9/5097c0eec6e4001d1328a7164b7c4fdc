@@ -1,0 +1,26 @@
+package com.user;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+public interface MailBox {
+	
+	public String[] textColor = {"\u001B[30m","\u001B[31m",
+			"\u001B[32m","\u001B[33m","\u001B[34m"
+			,"\u001B[35m","\u001B[36m","\u001B[37m"};
+	public String[] shape = {"원", "타원", "네모", "﻿╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\r\n"
+			+ "♡  내용을 ♡\r\n"
+			+ "♡  여기에 입력♡\r\n"
+			+ "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\r\n"
+			+ "                 O °\r\n"
+			+ "  〃∩　∧＿∧\r\n"
+			+ "⊂⌒（ ´・ω・）\r\n"
+			+ "            ヽ_っ＿/￣￣￣/\r\n"
+			+ "          　 　 ＼/＿＿＿/\r\n"
+			+ ""};
+	public abstract void viewBox();
+	public abstract void upDateBox(int textColor, int shape);
+	
+}
